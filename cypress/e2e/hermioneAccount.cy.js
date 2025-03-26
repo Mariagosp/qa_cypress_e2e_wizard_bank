@@ -5,8 +5,8 @@ import { faker } from '@faker-js/faker';
 describe('Bank app', () => {
   const user = 'Hermoine Granger';
   const accountNumber = '1002';
-  const depositAmount = `${faker.number.int({ min: 500, max: 1000 })}`;
-  const withdrawAmount = `${faker.number.int({ min: 50, max: 500 })}`;
+  const depositAmount = Number(`${faker.number.int({ min: 500, max: 1000 })}`);
+  const withdrawAmount = Number(`${faker.number.int({ min: 50, max: 500 })}`);
   const balance = depositAmount - withdrawAmount;
 
   before(() => {
